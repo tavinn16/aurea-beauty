@@ -1,0 +1,252 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    height: 100%;
+    overflow: hidden;
+    background-color: #28423E;
+}
+
+/*
+Irá organanizar a seção principal, onde a imagem fica à a esquerda e o títilo (nome da marca) e o formuláario de login ficam à direita, ambos centralizados verticalmente
+*/
+
+.main-section {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-left {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    width: 50%;
+    height: 100%;
+}
+
+#poster-img {
+    position: absolute;
+    width: auto;
+    height: 95%;
+    object-fit: cover;
+}
+
+/*sombra que ficará atrás do poster para dar um efeito de profundidade */
+.div-shader {
+    position: relative;
+    width: 50%;
+    height: 94%;
+    left: 7%;
+    background-color: #e9e7d8;
+    border-radius: 20px;
+    z-index: -1;
+}
+
+.section-right {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-right h1 {
+    color: #fff;
+    font-size: 3rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    padding: 2rem;
+    height: 100%;
+    min-height: 30rem;
+    max-height: 40rem;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    max-width: 400px;
+    border: 1.5px solid #000000b6;
+    border-radius: 20px;
+    background-color: #e9e7d8e1;
+    backdrop-filter: blur(1px);
+}
+
+#title-login-form {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #422B28;
+}
+
+/*icond de user q fica à esquerda do input de nome no formulário*/
+#icon-user {
+    position: absolute;
+    margin-bottom: 0;
+    padding: 0rem;
+    margin-top: 5rem;
+}
+
+#input-name {
+    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    margin-left: 30px;
+    font-size: 1rem;
+    border: 1px solid #000000b6;
+    border-radius: 20px;
+}
+
+#input-name:focus {
+    outline: none;
+    border-color: #422B28;
+    box-shadow: 0 0 10px #422B28;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+#icon-pasword {
+    position: absolute;
+    margin-bottom: 0;
+    padding: 0rem;
+    margin-top: 9.3rem;
+}
+
+#input-password {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    margin-left: 30px;
+    font-size: 1rem;
+    border: 1px solid #000000b6;
+    border-radius: 20px;
+}
+
+#input-password:focus {
+    outline: none;
+    border-color: #422B28;
+    box-shadow: 0 0 10px #422B28;
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.btns-logins-line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+#link-cadastro,
+#link-cadastro a{
+    text-decoration: none;
+    color: #59929E;
+    font-weight: bold;
+}
+
+#login-google {
+    width: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fff;
+    border: none;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-radius: 30px;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+#login-google:hover {
+    background-color: #28423E;
+    scale: 1.05;
+    transition: box-shadow 0.5s ease,background-color 0.5s ease;
+}
+
+#text-pr-cad {
+    text-align: end;
+    margin-bottom: 1rem;
+    color: #422B28;
+}
+
+#btn-login {
+    background-color: #422B28;
+    color: #fff;
+    border: 0.5px solid #000000b6;
+    padding: 0.75rem;
+    border-radius: 30px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: box-shadow 0.5s ease;
+}
+
+#btn-login:hover {
+    box-shadow:
+    0 6px 0px #28423E,
+    0 6.5px 0px #000000,
+    0 12px 0px #e9e7d8b6,
+    0 12.5px 0px #000000;
+    scale: 1.05;
+    transition: box-shadow 0.5s ease;
+}
+
+#btn-login:active {
+    background-color: #28423E;
+    transition: box-shadow 1s ease;
+}
+
+
+/* Curly Lines Animation */
+.curls-container {
+    position: absolute;
+    width: 120%;
+    height: 60vh;
+    top: -10%;
+    left: -5%;
+    z-index: 0;
+    overflow: hidden;
+    pointer-events: none;
+    transform: rotate(10deg);
+    transform-origin: top left;
+    z-index: -99;
+}
+
+.curls {
+    width: 100%;
+    height: 100%;
+    opacity: 0.6;
+}
+
+.curl-line {
+    stroke-dasharray: 3000;
+    stroke-dashoffset: 3000;
+    animation: draw-curl 8s ease-in-out infinite alternate, wiggle 5s ease-in-out infinite;
+}
+
+.curl-line:nth-child(1) { animation-delay: 0s, 0s; }
+.curl-line:nth-child(2) { animation-delay: 0.5s, 0.2s; }
+.curl-line:nth-child(3) { animation-delay: 1s, 0.4s; }
+.curl-line:nth-child(4) { animation-delay: 1.5s, 0.6s; }
+.curl-line:nth-child(5) { animation-delay: 2s, 0.8s; }
+
+@keyframes draw-curl {
+    0% {
+        stroke-dashoffset: 3000;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes wiggle {
+    0%, 100% {
+        transform: translateY(0) translateX(0);
+    }
+    50% {
+        transform: translateY(10px) translateX(5px);
+    }
+}
