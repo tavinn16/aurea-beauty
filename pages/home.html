@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 
 <body>
@@ -31,14 +32,25 @@
         </div>
 
         <div class="menu-hamburguer">
-            <span id="line-1"></span>
-            <span id="line-2"></span>
-            <span id="line-3"></span>
+            <input id="toggleChecker" type="checkbox">
+            <label id="togglerLable" for="toggleChecker">
+                <div class="checkboxtoggler">
+                    <div class="line-1"></div>
+                    <div class="line-2"></div>
+                    <div class="line-3"></div>
+                </div>
+            </label>
         </div>
+        <div class="full-menu" id="full-menu">
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Sobre mim</a></li>
+            </ul>
+          </div>
     </div>
 
     <div class="navbar">
-        <a href="Home.html"><button>Home</button></a>
+        <a href="Home.html" class="active"><button>Home</button></a>
         <a href="cronograma.html"><button>Cronograma</button></a>
         <a href="produtos.html"><button>Produtos</button></a>
         <a href="estella-ia.html"><button>Estella IA</button></a>

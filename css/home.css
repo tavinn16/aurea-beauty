@@ -1,0 +1,178 @@
+:root {
+  --color-primary-light: #e9e7d8;
+  --color-base-blue-light: #59929e;
+  --color-base-green-light: #3c6d66;
+  --color-base-brown-light: #594543;
+
+  /*gradients light*/
+  --gradiente-Offwhite-to-green: linear-gradient(135deg, #99AAAA, #59929E, #3C6D66);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--color-primary-light);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px;
+}
+
+.logo {
+  font-size: 40px;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 10px 40px;
+  border: none;
+  border-radius: 50px;
+  outline: none;
+}
+
+#Search--Streamline-Rounded-Material {
+  position: absolute;
+  transform: translateX(20%) translateY(20%);
+  z-index: 10;
+}
+
+.perfil-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-base-green-light);
+}
+
+.checkboxtoggler {
+  width: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7em;
+  cursor: pointer;
+}
+.line-1 {
+  background: var(--color-base-blue-light);
+  height: 0.25em;
+  border-radius: 10em;
+  transition-duration: 500ms;
+}
+.line-2 {
+  width: 70%;
+  background: var(--color-base-blue-light);
+  height: 0.25em;
+  border-radius: 10em;
+  margin-left: 10%;
+  transition-duration: 500ms;
+}
+.line-3 {
+  background: var(--color-base-blue-light);
+  height: 0.25em;
+  border-radius: 10em;
+  transition-duration: 500ms;
+}
+/* Checkbox invisível que controla a animação do "hambúrguer" */
+#toggleChecker {
+  height: 2em;
+  width: 100%;
+  display: none;
+}
+/* Ao clicar, as linhas rotacionam/expandem, usando cor de destaque do tema */
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-1 {
+  transform: rotate(45deg) translateY(0.7em) translateX(0.7em);
+  background-color: var(--color-base-blue-light);
+}
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-2 {
+  width: 100%;
+  margin-left: 0;
+  transform: rotate(-45deg) translateY(0) translateX(0.1em);
+  background-color: var(--color-base-blue-light);
+}
+#toggleChecker:checked + #togglerLable .checkboxtoggler .line-3 {
+  transform: scaleX(0);
+  transform-origin: left;
+}
+
+.full-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  height: calc(var(--vh) * 100);
+  background-color: var(--color-base-blue-light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  transform: translateY(-100%);
+  transition: transform 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  z-index: 1001;
+}
+
+.full-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.full-menu ul {
+  list-style: none;
+  text-align: center;
+}
+.full-menu a {
+  color: rgb(255, 0, 0);
+  font-size: 2rem;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  transition: 0.3s;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid #000;
+    border-bottom: 1px solid #000;
+}
+
+.navbar a {
+    color: var(--color-base-green-light);
+    font-size: 1.2rem;
+    margin: 30px;
+    text-decoration: none;
+}
+
+.navbar button {
+    background: var(--color-base-blue-light);
+    padding: 15px 25px;
+    border: none;
+    border-radius: 50px;
+    color: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.navbar a:hover button {
+    background: var(--color-base-green-light) !important;
+}
+
+.navbar a.active button {
+    background: var(--color-base-brown-light) !important;
+}
