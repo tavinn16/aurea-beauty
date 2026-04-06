@@ -23,30 +23,41 @@ Irá organanizar a seção principal, onde a imagem fica à a esquerda e o títi
 }
 
 .section-left {
-    display: grid;
-    justify-items: center;
+    display: flex;
+    justify-content: center;
     align-items: center;
-    position: relative;
     width: 50%;
     height: 100%;
 }
 
-#poster-img {
-    position: absolute;
-    width: auto;
-    height: 95%;
-    object-fit: cover;
+/* Container que mantém a imagem e o fundo juntos */
+.poster-wrapper {
+    position: relative;
+    height: 85%; /* Ajusta a altura proporcionalmente à tela */
+    display: inline-block;
 }
 
-/*sombra que ficará atrás do poster para dar um efeito de profundidade */
-.div-shader {
+#poster-img {
+    height: 100%;
+    width: auto;
+    object-fit: cover;
+    border-radius: 20px;
     position: relative;
-    width: 50%;
-    height: 45rem;
-    left: 4rem;
+    z-index: 2;
+}
+
+/* Sombra que acompanha o tamanho da imagem e fica levemente para fora */
+.div-shader {
+    position: absolute;
+    /* Faz o fundo ser ligeiramente menor que a imagem (98%) */
+    width: 98%;
+    height: 98%;
+    /* Posicionamento para ficar "para fora" à direita e embaixo, como na imagem */
+    top: 1%; 
+    left: 4%; 
     background-color: #e9e7d8;
     border-radius: 20px;
-    z-index: -1;
+    z-index: 1;
 }
 
 .section-right {

@@ -18,13 +18,17 @@
                 <path class="curl-line" d="M-100,140 C340,280 640,30 940,180 C1240,330 1540,80 1840,180" fill="none" stroke="#A7C7C2" stroke-width="2" />
                 <path class="curl-line" d="M-100,180 C360,320 660,70 960,220 C1260,370 1560,120 1860,220" fill="none" stroke="#A7C7C2" stroke-width="2" />
                 <path class="curl-line" d="M-100,220 C380,360 680,110 980,260 C1280,450 1580,160 1880,260" fill="none" stroke="#A7C7C2" stroke-width="2" />
+                <!--
                 <path class="curly-line" d="M-100,260 C400,400 700,150 1000,300 C1300,450 1600,200 1900,300" fill="none" stroke="#A7C7C2" stroke-width="2" />
                 <path class="curl-line" d="M-100,300 C420,440 720,190 1020,340 C1320,490 1620,240 1920,340" fill="none" stroke="#A7C7C2" stroke-width="2" />
+                -->
             </svg>
         </div>
         <div class="section-left">
-            <img src="/uploads/model-login.png" alt="" id="poster-img">
-            <div class="div-shader"></div>
+            <div class="poster-wrapper">
+                <img src="/uploads/model-login.png" alt="" id="poster-img">
+                <div class="div-shader"></div>
+            </div>
         </div>
         <div class="section-right">
             <h1>Aurea Beauty</h1>
@@ -51,7 +55,7 @@
                 <p id="text-pr-cad">Não tem uma conta? <a href="cadastro.html" id="link-cadastro">Cadastre-se</a></p>
 
                 <div class="btns-logins-line">
-                    <button id="login-google"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    <button type="button" id="login-google"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                             id="Google-Icon--Streamline-Svg-Logos" height="24" width="24">
                             <path fill="#4285f4"
                                 d="M23.5151 12.2611c0 -0.9661 -0.0784 -1.6711 -0.24805 -2.4022H12.2351v4.3605h6.4755c-0.1305 1.08365 -0.8355 2.7156 -2.4022 3.8122l-0.02195 0.146 3.4881 2.702175 0.24165 0.024125c2.2194 -2.04975 3.4989 -5.0656 3.4989 -8.6428Z"
@@ -68,7 +72,7 @@
                         </svg></button>
                 </div>
 
-                <button type="submit" id="btn-login">Login</button>
+                <a href="pages/home.html" style="text-decoration: none;"><button type="button" id="btn-login" style="width: 100%;">Login</button></a>
             </form>
         </div>
 </body>
